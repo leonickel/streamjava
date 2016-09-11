@@ -15,6 +15,9 @@ public class StreamServiceImpl implements StreamService {
 	 */
 	@Override
 	public String getSample(String stream, int sampleSize) {
+		if(stream == null || stream.isEmpty() || sampleSize < 0) {
+			return "";
+		}
 		final StringBuilder result = new StringBuilder();
 		stream.chars().parallel().limit(sampleSize).forEach(c -> result.append((char) c));
 		return result.toString();

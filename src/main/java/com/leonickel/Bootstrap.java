@@ -27,7 +27,7 @@ public class Bootstrap {
 			sampleSize = Integer.parseInt(args[0]);
 		} catch (NumberFormatException e) {
 			logger.error("the sample size must be a positive number, exitting...");
-			return;
+			return; //instead of System.exit(9) for unit tests flow
 		}
 		
 		logger.info("sample size: [{}]", sampleSize);
