@@ -37,7 +37,8 @@ Below you can see the logging after an executing providing just sample_size = 5:
 2016-09-11 22:12:40,268 [INFO] [main] [application] sample size: [5]
 2016-09-11 22:12:40,543 [INFO] [main] [application] generated sample: [5bca6] from stream: [a6bc5647-0f30-4448-8a20-87d972286832]
 ```
-And now you can see below the logging after providing sample_size = 6 and stream_value = ABCDEFGHIJKLMN:
+Now you can see below the logging after providing sample_size = 6 and stream_value = ABCDEFGHIJKLMN:
+
 > `java -jar target/StreamJava.jar 6 ABCDEFGHIJKLMN`
 ```console
 2016-09-11 22:34:06,670 [INFO] [main] [application] sample size: [6]
