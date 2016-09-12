@@ -31,15 +31,25 @@ The fat jar called 'StreamJava.jar' should be generated at target/ folder. To ru
 where [SAMPLE_SIZE] parameter it's the sample size to be generated. Providing only sample_size will let the system generate a random stream using UUID mechanism. If you want to provide a sample, you just need to pass it as second parameter as described below:
 > `java -jar target/StreamJava.jar [SAMPLE_SIZE] [STREAM_VALUE]`
 
-Below you can see logging after an executing providing just sample_size = 5:
+Below you can see the logging after an executing providing just sample_size = 5:
 > `java -jar target/StreamJava.jar 5`
 ```console
 2016-09-11 22:12:40,268 [INFO] [main] [application] sample size: [5]
 2016-09-11 22:12:40,543 [INFO] [main] [application] generated sample: [5bca6] from stream: [a6bc5647-0f30-4448-8a20-87d972286832]
 ```
+And now you can see below the logging after providing sample_size = 6 and stream_value = ABCDEFGHIJKLMN:
+> `java -jar target/StreamJava.jar 6 ABCDEFGHIJKLMN`
+```console
+2016-09-11 22:34:06,670 [INFO] [main] [application] sample size: [6]
+2016-09-11 22:34:06,915 [INFO] [main] [application] generated sample: [EDFBAC] from stream: [ABCDEFGHIJKLMN]
+```
 
 Note: in case [STREAM_VALUE] it's a compound word like ABC DEF, you should wrap like this: "ABC DEF". See command line example below:
 > `java -jar target/StreamJava.jar 5 "ABC DEF"`
+```console
+2016-09-11 22:35:11,351 [INFO] [main] [application] sample size: [5]
+2016-09-11 22:35:11,600 [INFO] [main] [application] generated sample: [ DABC] from stream: [ABC DEF]
+```
 
 
 ## FAQ and Troubleshooting
