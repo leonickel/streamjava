@@ -44,6 +44,7 @@ Note: in case [STREAM_VALUE] it's a compound word like ABC DEF, you should wrap 
 
 ## FAQ and Troubleshooting
 * Running application without providing any parameter 
+
 > `java -jar target/StreamJava.jar`
 
 The system will print error message like this:
@@ -58,6 +59,7 @@ The system will print error message like this:
 and will exit. [SAMPLE_SIZE] is mandatory and should be passed by at startup.
 
 * Running application providing invalid [SAMPLE_SIZE]
+
 > `java -jar target/StreamJava.jar a`
 
 The system will print error message like this:
