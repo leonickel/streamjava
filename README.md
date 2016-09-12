@@ -1,4 +1,4 @@
-# stream java
+# Stream Java
 This system was developed following the premises below received by email:
 ```console
 Write a stream sampler that picks a random (representative) sample of size k from a stream of values with unknown and possibly very large length.
@@ -32,16 +32,19 @@ where [SAMPLE_SIZE] parameter it's the sample size to be generated. Providing on
 > `java -jar target/StreamJava.jar [SAMPLE_SIZE] [STREAM_VALUE]`
 
 Below you can see logging after an executing providing just sample_size = 5:
+> `java -jar target/StreamJava.jar 5`
 ```console
 2016-09-11 22:12:40,268 [INFO] [main] [application] sample size: [5]
 2016-09-11 22:12:40,543 [INFO] [main] [application] generated sample: [5bca6] from stream: [a6bc5647-0f30-4448-8a20-87d972286832]
 ```
 
-Note: in case [STREAM_VALUE] it's a compound word like ABC DEF, you should wrap like this: "ABC DEF"
+Note: in case [STREAM_VALUE] it's a compound word like ABC DEF, you should wrap like this: "ABC DEF". See command line example below:
+> `java -jar target/StreamJava.jar 5 "ABC DEF"`
 
 
 ## FAQ and Troubleshooting
-* Running application without provide any parameter 
+* Running application without providing any parameter 
+> `java -jar target/StreamJava.jar`
 
 The system will print error message like this:
 
@@ -53,3 +56,13 @@ The system will print error message like this:
 2016-09-11 22:14:28,258 [ERROR] [main] [application] >>>>>>>>>>>>>>>>>>>>>> EXITTING <<<<<<<<<<<<<<<<<<<<<<<
 ```
 and will exit. [SAMPLE_SIZE] is mandatory and should be passed by at startup.
+
+* Running application providing invalid [SAMPLE_SIZE]
+> `java -jar target/StreamJava.jar a`
+
+The system will print error message like this:
+
+```console
+2016-09-11 22:27:18,921 [ERROR] [main] [application] the sample size must be a positive number, exitting...
+```
+and will exit. [SAMPLE_SIZE] must be a positive number.
