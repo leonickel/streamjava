@@ -8,7 +8,7 @@ public class Utils {
 	 * Generates a random string value based on UUID mechanism 
 	 * @return
 	 */
-	public static String generateRandomSampler() {
+	public static String generateRandomStream() {
 		return UUID.randomUUID().toString(); 
 	}
 }

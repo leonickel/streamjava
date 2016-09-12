@@ -31,7 +31,7 @@ public class Bootstrap {
 		}
 		
 		logger.info("sample size: [{}]", sampleSize);
-		final String stream = args.length == 2 ? args[1] : Utils.generateRandomSampler();
+		final String stream = args.length == 2 ? args[1] : Utils.generateRandomStream();
 
 		final Injector injector = Guice.createInjector(new DependencyInjector());
 		final StreamService service = injector.getInstance(StreamService.class);
